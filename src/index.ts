@@ -15,7 +15,7 @@ app.post("/", async (req, res) => {
   const { prompt } = req.body;
 
   const result = streamText({
-    model: "openai/gpt-4o",
+    model: "openai/gpt-5-mini",
     prompt,
   });
 
