@@ -1,6 +1,6 @@
 // Use "type: module" in package.json to use ES modules
 import express from "express";
-import { streamText } from "ai";
+import { gateway, streamText } from "ai";
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.post("/", async (req, res) => {
   const { prompt } = req.body;
 
   const result = streamText({
-    model: "openai/gpt-5-mini",
+    model: gateway("xai/grok-4"),
     prompt,
   });
 
